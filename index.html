@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Aprajita Roy · Program Manager, EdTech</title>
+<meta name="description" content="Aprajita Roy runs cohort-based learning programs: academic operations, learner experience and program analytics.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Literata:opsz,wght@7..72,400;7..72,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F3F5F8; --surface:#FFFFFF; --ink:#1A1D24; --muted:#5B6272;
+  --indigo:#22306B; --line:#D9DEE7; --marker:#F6DC5C; --marker-ink:#1A1D24;
+  --display:"Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body:"Literata", Georgia, "Times New Roman", serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#12151D; --surface:#1A1F2A; --ink:#E8EBF1; --muted:#A3AABA;
+    --indigo:#AFC0FF; --line:#2C3342; --marker:#8A7518; --marker-ink:#FFF6CC;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#12151D; --surface:#1A1F2A; --ink:#E8EBF1; --muted:#A3AABA;
+  --indigo:#AFC0FF; --line:#2C3342; --marker:#8A7518; --marker-ink:#FFF6CC;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:1.0625rem;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:var(--indigo);text-underline-offset:3px}
+a:focus-visible{outline:2px solid var(--indigo);outline-offset:3px;border-radius:2px}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1.5rem}
+
+header.top{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding:1.5rem 0}
+.mark{font-family:var(--display);font-weight:700;font-size:1.05rem;color:var(--ink);text-decoration:none}
+nav{display:flex;gap:1.25rem;font-family:var(--display);font-size:.95rem}
+nav a{color:var(--muted);text-decoration:none}
+nav a:hover{color:var(--ink)}
+
+.hero{padding:3.5rem 0 3rem}
+.hero h1{font-family:var(--display);font-weight:800;font-size:clamp(2.4rem,7vw,4.1rem);line-height:1.02;letter-spacing:-.025em;margin:0 0 1.5rem;color:var(--ink)}
+.hero p{max-width:36rem;margin:0 0 2rem;color:var(--muted);font-size:1.12rem}
+.hero p strong{color:var(--ink);font-weight:600}
+.actions{display:flex;flex-wrap:wrap;gap:.75rem}
+.btn{font-family:var(--display);font-weight:700;font-size:1rem;padding:.8rem 1.3rem;border-radius:999px;text-decoration:none;border:2px solid var(--indigo)}
+.btn.primary{background:var(--indigo);color:var(--paper)}
+.btn.ghost{color:var(--indigo)}
+
+/* The one bold device: highlighter marks on real results */
+mark{background:linear-gradient(104deg,transparent .3em,var(--marker) .3em,var(--marker) calc(100% - .15em),transparent calc(100% - .15em));
+  color:var(--marker-ink);padding:0 .3em;margin:0 -.1em;border-radius:.25em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+
+section{padding:3rem 0;border-top:1px solid var(--line)}
+h2{font-family:var(--display);font-weight:700;font-size:1.75rem;letter-spacing:-.01em;margin:0 0 1.5rem;line-height:1.2}
+h3{font-family:var(--display);font-weight:700;font-size:1.3rem;margin:0 0 .25rem;line-height:1.3}
+
+.results{list-style:none;margin:0;padding:0;display:grid;gap:.9rem}
+.results li{font-size:1.1rem}
+
+.case{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1.6rem 1.6rem 1.3rem;margin-bottom:1.25rem}
+.case .where{font-family:var(--display);color:var(--muted);font-size:.95rem;margin:0 0 1rem}
+.case dl{margin:0;display:grid;grid-template-columns:7.5rem 1fr;gap:.55rem 1rem}
+.case dt{font-family:var(--display);font-weight:700;color:var(--indigo);font-size:.95rem;padding-top:.15rem}
+.case dd{margin:0}
+@media (max-width:560px){.case dl{grid-template-columns:1fr;gap:.1rem}.case dd{margin-bottom:.7rem}}
+
+.timeline{list-style:none;margin:0;padding:0 0 0 1.4rem;border-left:2px solid var(--line)}
+.timeline li{position:relative;padding:0 0 1.9rem}
+.timeline li:last-child{padding-bottom:0}
+.timeline li::before{content:"";position:absolute;left:calc(-1.4rem - 7px);top:.45rem;width:12px;height:12px;border-radius:50%;background:var(--paper);border:2px solid var(--indigo)}
+.timeline li:first-child::before{background:var(--indigo)}
+.when{font-family:var(--display);font-size:.92rem;color:var(--muted);margin:0}
+.timeline p{margin:.35rem 0 0}
+
+.skills{display:flex;flex-wrap:wrap;gap:.5rem;list-style:none;padding:0;margin:0 0 1.5rem}
+.skills li{font-family:var(--display);font-size:.93rem;border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:.35rem .85rem}
+.small{color:var(--muted);font-size:.98rem}
+
+.contact h2{font-size:clamp(1.9rem,5vw,2.6rem);font-weight:800;letter-spacing:-.02em}
+footer{padding:2rem 0 3rem;color:var(--muted);font-size:.9rem;font-family:var(--display)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="mark" href="#top">Aprajita Roy</a>
+    <nav aria-label="Sections">
+      <a href="#work">Work</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <div class="hero">
+      <h1>I run learning programs people show up for.</h1>
+      <p>I'm <strong>Aprajita Roy</strong>, a program manager in EdTech. For four years I've run cohorts, bootcamps and fellowships of 100–150 learners at a time, at Masters Union and Inc42, from the first orientation to the last grade.</p>
+      <div class="actions">
+        <a class="btn primary" href="mailto:aprajitaroy29@gmail.com?subject=Hello%20Aprajita">Email me</a>
+        <a class="btn ghost" href="https://linkedin.com/in/aprajita-roy" target="_blank" rel="noopener">LinkedIn profile</a>
+      </div>
+    </div>
+
+    <section aria-labelledby="results-h">
+      <h2 id="results-h">What changes when I run a program</h2>
+      <ul class="results">
+        <li>Academic NPS went from 70 to <mark>80–85</mark> for a 150-learner cohort.</li>
+        <li><mark>97% of student queries</mark> answered within 24 hours, down from a 48-hour average.</li>
+        <li><mark>90%+ attendance</mark> across 8 bootcamps and 10+ cohort events.</li>
+        <li>An <mark>NPS of 89</mark> for Inc42's D2CX program for senior professionals.</li>
+        <li><mark>25% less manual work</mark> in academic operations after automating it.</li>
+      </ul>
+    </section>
+
+    <section id="work" aria-labelledby="work-h">
+      <h2 id="work-h">Selected work</h2>
+
+      <article class="case">
+        <h3>Running a 150-learner undergraduate cohort</h3>
+        <p class="where">Masters Union · UGTBM Batch 2028</p>
+        <dl>
+          <dt>The problem</dt><dd>Students waited up to two days for answers, repeat escalations piled up, and Academic NPS sat at 70.</dd>
+          <dt>What I did</dt><dd>Took over the full cohort lifecycle, including curriculum delivery, assessments and scheduling for 20+ courses. I made myself the single owner of student queries and rebuilt the workflows behind them.</dd>
+          <dt>The result</dt><dd>Turnaround fell from 48 hours to under 24, repeat escalations dropped ~31%, and Academic NPS rose to 80–85. Faculty and admin got back 20–25% of their time.</dd>
+        </dl>
+      </article>
+
+      <article class="case">
+        <h3>Keeping busy professionals in a fellowship</h3>
+        <p class="where">Inc42 · D2CX and ManagementX</p>
+        <dl>
+          <dt>The problem</dt><dd>Mid-to-senior professionals in a cohort program are the first to quietly drop off when work gets busy.</dd>
+          <dt>What I did</dt><dd>Built a Fellow Engagement Tracker to spot disengagement early, and ran session-level NPS across 50+ sessions so we could fix problems in the same week.</dd>
+          <dt>The result</dt><dd>Drop-offs fell ~20%, and D2CX finished with an NPS of 89 across 100+ participants.</dd>
+        </dl>
+      </article>
+
+      <article class="case">
+        <h3>Automating academic operations with AI</h3>
+        <p class="where">Masters Union</p>
+        <dl>
+          <dt>The problem</dt><dd>Much of the team's week went on repetitive coordination and follow-ups.</dd>
+          <dt>What I did</dt><dd>Led the adoption of n8n workflows and NotebookLM across academic operations.</dd>
+          <dt>The result</dt><dd>Manual effort dropped by 25%, freeing the team for work that needs a person.</dd>
+        </dl>
+      </article>
+
+      <article class="case">
+        <h3>Building a faculty bench in two months</h3>
+        <p class="where">Masters Union · program expansion</p>
+        <dl>
+          <dt>The problem</dt><dd>New programs needed new faculty, fast, with no standard way to bring them on.</dd>
+          <dt>What I did</dt><dd>Led faculty outreach and wrote end-to-end SOPs for the process.</dd>
+          <dt>The result</dt><dd>20+ faculty partnerships closed in two months, and onboarding became faster and repeatable.</dd>
+        </dl>
+      </article>
+    </section>
+
+    <section id="experience" aria-labelledby="exp-h">
+      <h2 id="exp-h">Experience</h2>
+      <ol class="timeline" reversed>
+        <li>
+          <p class="when">Sept 2025 – present</p>
+          <h3>Associate Program Manager, Masters Union</h3>
+          <p>End-to-end academic and cohort operations for 150+ undergraduates, and 8+ bootcamps of 100+ participants each.</p>
+        </li>
+        <li>
+          <p class="when">Aug 2024 – Aug 2025</p>
+          <h3>Program &amp; Community Associate, Inc42 Media</h3>
+          <p>Ran two flagship cohort programs for professionals, plus 10+ orientations, retreats and convocations.</p>
+        </li>
+        <li>
+          <p class="when">Dec 2022 – Mar 2024</p>
+          <h3>Business Analyst, Wellversed Health</h3>
+          <p>Growth lead for 8–10 brand accounts, delivering 10–15% incremental revenue.</p>
+        </li>
+        <li>
+          <p class="when">Apr 2022 – Oct 2022</p>
+          <h3>Consultant, Wadhwani Foundation</h3>
+          <p>Supported cohort launches with 200+ applications, and coached 15+ startups and women entrepreneurs on their pitches.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section aria-labelledby="skills-h">
+      <h2 id="skills-h">Skills and tools</h2>
+      <ul class="skills">
+        <li>Cohort management</li><li>Learning operations</li><li>Curriculum execution</li>
+        <li>Learner engagement</li><li>Community building</li><li>Faculty &amp; stakeholder management</li>
+        <li>Escalation management</li><li>Program analytics &amp; NPS</li><li>Process automation</li>
+        <li>n8n</li><li>NotebookLM</li><li>Zapier</li><li>Notion</li><li>Jira</li><li>Asana</li><li>Google Workspace</li>
+      </ul>
+      <p class="small">MA and BA in Political Science, Delhi University. Product Management certificate, Internshala. French A1. Author of two research papers.</p>
+    </section>
+
+    <section id="contact" class="contact" aria-labelledby="contact-h">
+      <h2 id="contact-h">Running a cohort that needs to go well?</h2>
+      <p>I'm based in Bengaluru and happy to talk about program manager roles in EdTech. Email is the fastest way to reach me, and I can share my full resume.</p>
+      <div class="actions">
+        <a class="btn primary" href="mailto:aprajitaroy29@gmail.com?subject=Hello%20Aprajita">aprajitaroy29@gmail.com</a>
+        <a class="btn ghost" href="https://linkedin.com/in/aprajita-roy" target="_blank" rel="noopener">LinkedIn profile</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2026 Aprajita Roy</footer>
+</div>
+</body>
+</html>
